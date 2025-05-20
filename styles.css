@@ -1,0 +1,124 @@
+
+/* Criando variáveis */
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+    --white: #FFF;
+    font-size: 10px
+}
+
+
+/* Criando estilo geral do projeto */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear ;
+    font-family: 'Poppins';
+
+}
+
+body{
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Fim do estilo gerais */
+
+
+/* Criando estio do header e suas dependências */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border) ;
+
+    & section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    & .nav-bar a{
+        margin: 0 1rem;
+        font-size: 1.8rem;
+        color: var(--white);
+
+        &:hover{
+            color: var(--main-color);
+            border-bottom: 0.1rem solid var(--main-color);
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+    }
+
+    & .icons img{
+        width: 30px;
+        margin: 1rem;
+        cursor: pointer;
+
+        &:hover{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+}
+
+
+.btn{
+    background-color: var(--main-color);
+    color: var(--white);    
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.home-container{
+    background-image: url(https://i.ibb.co/t41TrTy/home-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center; /*Posicionando a imagem ao centro*/
+    background-size: cover; /*Preenchendo todo o espaço do container*/
+    height: 100vh;  /*Definindo a altura do cotainer*/
+
+
+    & section{
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    & .content{
+        max-width: 60rem;
+
+        & h3 {
+            color: var(--white);
+            font-size: 6rem;
+            line-height: 1;
+        }
+
+        & p {
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: 100;
+            line-height: 1.8;
+            padding: 1rem 0 ;
+        }
+    }
+}
