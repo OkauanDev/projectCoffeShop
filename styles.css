@@ -33,6 +33,23 @@ section {
     max-width: 1200px;
 }
 
+.title{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+span{
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.content{
+        max-width: 60rem;
+}
+
+
 /* Fim do estilo gerais */
 
 
@@ -44,6 +61,7 @@ section {
     right: 0;
     z-index: 99;
     border-bottom: var(--border) ;
+    background-color: var(--bg);
 
     & section{
         display: flex;
@@ -121,4 +139,34 @@ section {
             padding: 1rem 0 ;
         }
     }
+}
+
+/* Criando o estilo do sobre e suas depedências */
+.about{
+
+    & .row{
+        display: flex;
+        align-items: center ;
+        background-color: var(--black);
+        gap: 1.5rem;
+
+            & .content{
+                padding: 2rem;
+        
+                & h3 {
+                font-size: 3rem;
+                color: var(--white)
+        }
+
+                & p {
+                font-size: 1.6rem;
+                color: var(--white);
+                padding: 1rem 0;
+                line-height: 1.8;
+                margin-bottom: 4rem ;
+        }
+
+    }
+}
+
 }
